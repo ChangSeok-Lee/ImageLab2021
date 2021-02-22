@@ -1,0 +1,19 @@
+.wrapper {
+  
+   display: flex;
+   justify-content:flex-start;
+   align-items:flex-start;
+   min-height: 80vh;
+   margin-left: 15%;
+ }
+
+
+ .wrapper .photo{
+   width: 480px;
+   height: 640px;
+  align-items:flex-start;
+  justify-content:flex-start;
+ }
+
+
+ 

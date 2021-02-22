@@ -1,0 +1,14 @@
+.sideMenu{
+    width: 250px;
+    border-right:solid;
+    border-width: 0.2px;
+    min-height: 800px;
+    margin-left: 15%;
+    font-size: 40px;
+    
+    
+}
+.sideMenu li{
+    line-height: 250%;
+    font-size: 20px;
+}

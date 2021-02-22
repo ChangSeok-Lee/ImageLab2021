@@ -1,0 +1,33 @@
+
+il{
+    float:none;
+}
+.pfdesc{
+    margin-top: 30px;
+    width: 700px;
+    text-align:left;
+    padding-left: 150px;
+    font-size: 20px;
+  
+
+}
+.pfdesc .pf_name{
+    font-size: 40px;
+}
+
+.pfdesc .pf_desc {
+    font-size: 20px;
+    padding-left:0; 
+    margin-left:0;
+    padding-left:0;
+    
+    line-height:350% ;
+}
+.pfdesc .pf_desc ul{
+    font-size: 15px;
+    padding-left:0; 
+    margin-left:15px;
+    padding-left:0;
+    
+    line-height:150% ;
+}

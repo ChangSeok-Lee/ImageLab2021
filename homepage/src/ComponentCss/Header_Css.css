@@ -1,0 +1,92 @@
+a{text-decoration: none; color: inherit;}
+
+
+.logo{
+    
+    list-style-type: none;
+    float:left;
+}
+.headlogo{
+    width: 300%;
+    height: 300%;
+}
+
+.head_banner{ 
+    
+    list-style-type: none;
+    
+   position: relative;
+    margin-top: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 1350px;
+    height: fit-content;
+}
+
+
+.category ul ul {padding-left:0; margin-left:0;}
+
+.category li{
+    list-style-type: none;
+    float:left;
+    
+    width:100px;
+    padding-left: 0px;
+    margin-left:0px;
+    
+    margin-right: 20px;
+    text-align:center;
+ 
+    /* border:solid; */
+}
+.category{
+    z-index: +1;
+    list-style-type: none;
+    float:right ;
+    font-size: 20px;
+    padding-left:0; margin-left:0;
+    padding-top: 10px;
+    width: fit-content;
+   
+    
+}
+
+.category li:hover ul{
+    display: block;
+    width:inherit;
+    transition-delay: 5s;
+}
+.category li:hover .sub{
+    display: block;
+    transition-delay: 5s;
+    opacity:1; visibility: visible;
+}
+
+.sub{
+
+    list-style-type:none;
+   display:none;
+   position:absolute; 
+   top: 50px;
+   margin-bottom: 70px;
+   padding-top: 10px;
+   border: solid;
+   z-index: +1;
+   text-align: center;
+   
+ 
+   
+  }
+  .sub li{
+    width:inherit; 
+    line-height:normal;
+    text-align: center;
+    width:auto;
+    height : auto;
+  }
+
+  .sub li:hover .sub{
+      cursor:pointer;
+    display: block;
+    transition-delay: 5s;
+}

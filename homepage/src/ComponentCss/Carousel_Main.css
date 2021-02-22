@@ -1,0 +1,13 @@
+
+.Carousel_img{
+    width :1300px;
+    height : 600px;
+    z-index: -1;
+}
+
+.Carousel{
+    width:auto;
+    height : auto;
+    z-index: -1;
+    padding-bottom: 50px;
+}

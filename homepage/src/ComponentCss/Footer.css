@@ -1,0 +1,22 @@
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+.contents-wrap {
+   min-height:100%;
+   position:relative;
+   padding-bottom:100px;/* footer height */
+}
+.footer {
+   align-items: center;
+   width: 1300px;;
+   height:100px;
+   position:relative;
+   margin-left:15% ;
+   bottom:0;
+   background:#4b4b4b;
+  text-align: center;
+  color: white;
+  bottom:0;
+}
