@@ -1,5 +1,8 @@
 a{text-decoration: none; color: inherit;}
-
+.underline{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
 
 .logo{
     
@@ -16,11 +19,12 @@ a{text-decoration: none; color: inherit;}
     list-style-type: none;
     
    position: relative;
-    margin-top: 100px;
+    padding-top: 100px;
     padding-left: 15%;
     padding-right: 15%;
     width: 1350px;
     height: fit-content;
+    border-bottom: RGB(154,154,154);
 }
 
 
@@ -44,7 +48,7 @@ a{text-decoration: none; color: inherit;}
     list-style-type: none;
     float:right ;
     font-size: 20px;
-    padding-left:0; margin-left:0;
+    padding: left 10px; margin-left:0;
     padding-top: 10px;
     width: fit-content;
    
@@ -62,21 +66,19 @@ a{text-decoration: none; color: inherit;}
     opacity:1; visibility: visible;
 }
 
-.sub{
 
+
+.sub{
     list-style-type:none;
    display:none;
    position:absolute; 
-   top: 50px;
    margin-bottom: 70px;
-   padding-top: 10px;
    border: solid;
    z-index: +1;
-   text-align: center;
-   
- 
-   
+   width: fit-content;
+   font-size:medium;
   }
+
   .sub li{
     width:inherit; 
     line-height:normal;

@@ -9,14 +9,19 @@ body {
    padding-bottom:100px;/* footer height */
 }
 .footer {
-   align-items: center;
-   width: 1300px;;
+   clear: both;
+   width: 1350px;;
    height:100px;
    position:relative;
    margin-left:15% ;
    bottom:0;
+   border:solid;
    background:#4b4b4b;
-  text-align: center;
-  color: white;
+   background-position:center bottom ;
+    text-align: center;
+    color: white;
+  
   bottom:0;
+ 
+  
 }

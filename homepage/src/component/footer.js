@@ -9,7 +9,7 @@ class Footer extends Component{
     {
         return(
 
-            <footer className='footer'>footer area</footer>
+            <div className='footer'>footer area</div>
 
         );
     }

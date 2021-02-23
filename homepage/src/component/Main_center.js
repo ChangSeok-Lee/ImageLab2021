@@ -30,4 +30,4 @@ class Main_center extends Component{
 
 
 }
-export default Main_center ;
+export default Main_center 
