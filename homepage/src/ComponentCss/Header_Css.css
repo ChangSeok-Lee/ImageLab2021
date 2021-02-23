@@ -34,12 +34,12 @@ a{text-decoration: none; color: inherit;}
     list-style-type: none;
     float:left;
     
-    width:100px;
+    width:fit-content;
     padding-left: 0px;
     margin-left:0px;
     
     margin-right: 20px;
-    text-align:center;
+   
  
     /* border:solid; */
 }
@@ -56,11 +56,15 @@ a{text-decoration: none; color: inherit;}
 }
 
 .category li:hover ul{
+    
+    
+    
     display: block;
-    width:inherit;
+   
     transition-delay: 5s;
 }
 .category li:hover .sub{
+   
     display: block;
     transition-delay: 5s;
     opacity:1; visibility: visible;
@@ -69,14 +73,20 @@ a{text-decoration: none; color: inherit;}
 
 
 .sub{
+   
+ 
     list-style-type:none;
    display:none;
    position:absolute; 
    margin-bottom: 70px;
    border: solid;
    z-index: +1;
-   width: fit-content;
+
+   
    font-size:medium;
+
+   width: fit-content;
+
   }
 
   .sub li{

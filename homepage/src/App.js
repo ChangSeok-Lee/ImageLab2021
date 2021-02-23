@@ -5,9 +5,13 @@ import Footer from './component/footer.js'
 import Side_Menu from './component/Side_Menu.js'
 import Main_center from './component/Main_center.js'
 import ArticleArea from './component/articleArea.js'
-
 import Carousel from './component/Carousel_main.js'
 import { Component } from 'react';
+import Prof_Desc from './component/Category/Lab Info/profDesc.js'
+
+
+
+
 
 class App extends Component {
 
@@ -16,9 +20,9 @@ class App extends Component {
 
       this.state={
         mode:'home',
-        modelist:['home', 'Lab Info','Research','Publication','Member','Board','test'],
-        stitleIndex:'',
-      Menu:
+        modelist:[ 'home','Lab Info','Research','Publication','Member','Board','test',],
+        Subtitle:'null',
+        Menu:
         [{id: 1, title:'Lab Info', Stitle:['교수소개', '연구실소개', '오시는길'] },
         {id: 2,title:'Research' ,Stitle:['교수소개', '연구실소개', '오시는길']},
         {id: 3,title:'Publication' ,Stitle:['저널', '학회']},
@@ -44,12 +48,14 @@ class App extends Component {
       _article = 
       <div> 
           <Side_Menu
-            id={this.state.modelist.indexOf(this.state.mode)} category={this.state.Menu}>
-              onChange={function(subIndex){
-              this.setState({stitleIndex:subIndex}); console.log("change");
-            }.bind(this)}
+            id={this.state.modelist.indexOf(this.state.mode)} category={this.state.Menu}   onChangeSubIndex={function(subIndex){
+              this.setState({Subtitle:subIndex});
+            }.bind(this)}>
+            
           </Side_Menu> 
-          <ArticleArea></ArticleArea>
+          <ArticleArea
+            articleSub={this.state.Subtitle} articleTitle={this.state.mode} >
+           </ArticleArea>
       </div>
         
         
@@ -62,14 +68,31 @@ class App extends Component {
   render(){
   return (
     <div>
-      <div>
+      
       <Header_Content onChange={function(text,subIndex){
-        this.setState({mode:text, stitleIndex:subIndex}); console.log("change");
+       
+       if(text!='home')
+       {if(subIndex==='null')
+          {
+            var temp =this.state.Menu[this.state.modelist.indexOf(text)-1].Stitle[0];
+        
+            this.setState({mode:text, Subtitle:this.state.Menu[this.state.modelist.indexOf(text)-1].Stitle[0]});
+          }else{
+            this.setState({mode:text, Subtitle:subIndex})
+
+          }
+        }
+        else
+          this.setState({mode:text})
+
+           console.log("change");
       }.bind(this)}   category={this.state.Menu}> </Header_Content>
 
       {this.getContent()}
+      
       <Footer></Footer>
-      </div>
+      
+     
     </div>
    
   );}

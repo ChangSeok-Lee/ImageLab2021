@@ -1,0 +1,21 @@
+
+
+.profPhoto{
+    position: relative;
+    clear:both;
+    float:left;
+    margin-left: 5%;
+    margin-top: 5%;
+    /* border: solid; */
+}
+.profPhoto .photo{ 
+    position: relative;
+    /* //border: solid; */
+}
+.profPhoto .photo img{ 
+    width: 200px;
+    height: auto;
+}
+.profPhoto figcaption{
+    text-align: center;
+}

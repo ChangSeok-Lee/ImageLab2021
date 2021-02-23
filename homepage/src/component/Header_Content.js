@@ -9,13 +9,15 @@ class Header_Content extends Component{
         var lists=[];
         var data= this.props.category;
         var i=0;
+       
         while(i<data.length)
         {
             var temp =data[i].title;
             lists.push(<a href='/' id={this.props.category[i].title} 
             onClick={function(e){   
                 e.preventDefault();
-                this.props.onChange(e.target.id,0); 
+               
+                this.props.onChange(e.target.id,'null'); 
                 }.bind(this)}>{this.props.category[i].title}</a>)
           
             var j=0;
@@ -25,8 +27,8 @@ class Header_Content extends Component{
                 sub_list.push(<li><a id={this.props.category[i].Stitle[j]} title={this.props.category[i].title} href='/'  
                     onClick={function(e){
                         e.preventDefault();
-                        this.props.onChange(e.target.title,e.target.id); 
-                     
+                        this.props.onChange(e.target.title,e.target.innerText); 
+                        
                     }.bind(this)}
 
                     >
@@ -44,7 +46,7 @@ class Header_Content extends Component{
            <div className='logo' >
                 <a className='logo' href='/'  onClick={function(e){
             e.preventDefault();
-            this.props.onChange('home',0);
+            this.props.onChange('home','null');
         }.bind(this)}><img classname='headlogo' src='/data/image/Lab_logo.png' alt ='no image'></img></a>
             </div>
             <div className='category' >
