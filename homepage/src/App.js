@@ -20,10 +20,10 @@ class App extends Component {
 
       this.state={
         mode:'home',
-        modelist:[ 'home','Lab Info','Research','Publication','Member','Board','test',],
+        modelist:[ 'home','LabInfo','Research','Publication','Member','Board','test',],
         Subtitle:'null',
         Menu:
-        [{id: 1, title:'Lab Info', Stitle:['교수소개', '연구실소개', '오시는길'] },
+        [{id: 1, title:'LabInfo', Stitle:['교수소개', '연구실소개', '오시는길'] },
         {id: 2,title:'Research' ,Stitle:['교수소개', '연구실소개', '오시는길']},
         {id: 3,title:'Publication' ,Stitle:['저널', '학회']},
         {id: 4,title:'Member' ,Stitle:['박사', '석사', '학부' , '졸업생', '연구실 사진']},
@@ -40,7 +40,11 @@ class App extends Component {
     var _article=null
     if(this.state.mode==='home')
     { //home
-     _article= <div>        <Carousel></Carousel>      <Main_center></Main_center> </div>
+     _article= 
+     <div>        
+      <Carousel></Carousel>      
+      <Main_center></Main_center> 
+     </div>
       
     }else
     {
@@ -48,7 +52,7 @@ class App extends Component {
       _article = 
       <div> 
           <Side_Menu
-            id={this.state.modelist.indexOf(this.state.mode)} category={this.state.Menu}   onChangeSubIndex={function(subIndex){
+            id={this.state.modelist.indexOf(this.state.mode)} category={this.state.Menu}  onChangeSubIndex={function(subIndex){
               this.setState({Subtitle:subIndex});
             }.bind(this)}>
             
@@ -69,24 +73,8 @@ class App extends Component {
   return (
     <div>
       
-      <Header_Content onChange={function(text,subIndex){
-       
-       if(text!='home')
-       {if(subIndex==='null')
-          {
-            var temp =this.state.Menu[this.state.modelist.indexOf(text)-1].Stitle[0];
-        
-            this.setState({mode:text, Subtitle:this.state.Menu[this.state.modelist.indexOf(text)-1].Stitle[0]});
-          }else{
-            this.setState({mode:text, Subtitle:subIndex})
-
-          }
-        }
-        else
-          this.setState({mode:text})
-
-           console.log("change");
-      }.bind(this)}   category={this.state.Menu}> </Header_Content>
+      <Header_Content category={this.state.Menu}> 
+      </Header_Content>
 
       {this.getContent()}
       

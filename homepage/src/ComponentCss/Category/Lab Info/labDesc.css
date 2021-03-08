@@ -1,0 +1,13 @@
+.articleArea{
+    /* border: solid; */
+    width: 50%;
+    min-height: 800px;
+    float: left;
+    position: relative;
+}
+
+.lab .intro{
+    width: 800px;
+    height: auto;
+    margin: 100px;
+}

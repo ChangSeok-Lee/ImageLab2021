@@ -1,6 +1,11 @@
 
-
-.profPhoto{
+.articleArea{
+    /* border: solid; */
+    min-height: 800px;
+    float: left;
+    position: relative;
+}
+.prof{
     position: relative;
     clear:both;
     float:left;
@@ -8,14 +13,20 @@
     margin-top: 5%;
     /* border: solid; */
 }
-.profPhoto .photo{ 
+.prof .photo{ 
     position: relative;
+    float : left
     /* //border: solid; */
 }
-.profPhoto .photo img{ 
+.prof .photo img{ 
     width: 200px;
     height: auto;
 }
-.profPhoto figcaption{
+.prof figcaption{
     text-align: center;
+}
+
+.prof .profTable{
+    float: left;
+    margin-top: 5%;
 }

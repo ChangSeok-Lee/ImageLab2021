@@ -4,11 +4,8 @@
 
     
     /* border: solid; */
+    width: 50%;
     min-height: 800px;
-    
-   
     float: left;
     position: relative;
-   
-    
 }
