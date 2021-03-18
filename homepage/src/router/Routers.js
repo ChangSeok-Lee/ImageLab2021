@@ -22,10 +22,12 @@ class Routers extends React.Component {
           <Route exact path="/" component={App} />
           <Route path="/LabInfo/:id" component={LabInfo} />
           <Route path="/LabInfo" component={LabInfo} />
+          <Route path="/Research/:id?/:des?" component={Research} />
           <Route path="/Research" component={Research} />
           <Route path="/Publication" component={Publication} />
           <Route path="/Member" component={Member} />
           <Route path="/Board" component={Board} />
+          <Route path="/Board/Posting_new" component={Board} />
           <Route path="/test" component={Test} />
         </Switch>
       </Router>

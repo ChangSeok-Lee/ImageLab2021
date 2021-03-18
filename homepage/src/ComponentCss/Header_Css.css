@@ -10,15 +10,15 @@ a{text-decoration: none; color: inherit;}
     float:left;
 }
 .headlogo{
-    width: 300%;
-    height: 300%;
+    width: 150%;
+    height: 150%;
 }
 
 .head_banner{ 
     
     list-style-type: none;
     
-   position: relative;
+    position: relative;
     padding-top: 100px;
     padding-left: 15%;
     padding-right: 15%;
@@ -51,13 +51,9 @@ a{text-decoration: none; color: inherit;}
     padding: left 10px; margin-left:0;
     padding-top: 10px;
     width: fit-content;
-   
-    
 }
 
 .category li:hover ul{
-    
-    
     
     display: block;
    
@@ -67,26 +63,21 @@ a{text-decoration: none; color: inherit;}
    
     display: block;
     transition-delay: 5s;
-    opacity:1; visibility: visible;
+    /*opacity:1;*/
+    visibility: visible;
 }
 
 
 
 .sub{
-   
- 
-    list-style-type:none;
-   display:none;
+   list-style-type:none;
+   display: none;
    position:absolute; 
    margin-bottom: 70px;
    border: solid;
-   z-index: +1;
-
-   
+   z-index: +1;  
    font-size:medium;
-
-   width: fit-content;
-
+   width: 150px;
   }
 
   .sub li{
@@ -98,7 +89,7 @@ a{text-decoration: none; color: inherit;}
   }
 
   .sub li:hover .sub{
-      cursor:pointer;
+    cursor: pointer;
     display: block;
     transition-delay: 5s;
 }

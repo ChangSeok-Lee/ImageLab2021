@@ -1,8 +1,11 @@
-
-.articleArea{
-    /* border: solid; */
+.postings {
+    margin:50px;
     width: 50%;
     min-height: 800px;
     float: left;
     position: relative;
+}
+
+.postings .content{
+
 }

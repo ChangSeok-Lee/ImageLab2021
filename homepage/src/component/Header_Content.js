@@ -14,25 +14,25 @@ class Header_Content extends Component{
            
         //     this.props.onChange(e.target.id,'null'); 
         //     }.bind(this)}
+        var keyIndex=0;
         while(i<data.length)
         {
             var temp =data[i].title;
-            lists.push(<a id={this.props.category[i].title} >
+            lists.push(
                 <Link to= {`/${this.props.category[i].title}`} >
                     {this.props.category[i].title}
-                </Link>
-                </a>)
+                </Link>)
           
             var j=0;
             var sub_list=[];
             while(j<data[i].Stitle.length)
             {
-                sub_list.push(<li><a id={this.props.category[i].Stitle[j]} title={this.props.category[i].title}><Link to = '/'>
-                        {this.props.category[i].Stitle[j]}</Link></a>
-                    </li>)
-                j++;
+                sub_list.push(<tr key={keyIndex}><td><Link to = {`/${data[i].title}/${j}`}>
+                        {this.props.category[i].Stitle[j]}</Link>
+                    </td></tr>)
+                j++;keyIndex++;
             }
-            lists[lists.length-1] = <li>{lists[lists.length-1]}<ul className='sub'>{sub_list}</ul></li>
+            lists[lists.length-1] = <li key={i}>{lists[lists.length-1]}<table className='sub'><tbody>{sub_list}</tbody></table></li>
             i++;
         }
 
@@ -41,10 +41,10 @@ class Header_Content extends Component{
         return(
         <div className='head_banner'>
            <div className='logo' >
-                <a className='logo'><Link to='/'><img classname='headlogo' src='/data/image/Lab_logo.png' alt ='no image'></img></Link></a>
+                <Link to='/'><img className='headlogo' src='/data/image/Lab_logo.png' alt ='no image'></img></Link>
             </div>
             <div className='category' >
-                        <ul >
+                        <ul key='navigation'>
                             {lists}
                         </ul>
             </div>

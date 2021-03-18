@@ -12,11 +12,11 @@ class Main_center extends Component{
     render(){
 
         return (
-        <article class="wrapper">
+        <article className="wrapper">
                 
 
             <div>
-                <img class='photo' src='/data/image/professor.jpg' alt ='no image'></img>
+                <img className='photo' src='/data/image/professor.jpg' alt ='no image'></img>
             </div>
             <div>
                 <div> <Main_description></Main_description></div>

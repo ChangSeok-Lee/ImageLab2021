@@ -3,10 +3,26 @@ import Header_Content from '../component/Header_Content'
 import Footer from '../component/footer.js'
 import Side_Menu from '../component/Side_Menu.js'
 import ArticleArea from '../component/articleArea.js'
-import { Component } from 'react';
+import { Component } from 'react'
+import { useParams } from 'react-router-dom';
+import Research1 from '../component/Category/ResearchData/Research1';
+import Research2 from '../component/Category/ResearchData/Research2';
+import Research3 from '../component/Category/ResearchData/Research3';
 
-
-
+function SetContent() {
+  let { id } = useParams();
+  let result;
+  switch({id}.id){
+    case '0':
+      return <Research1/>
+    case '1':
+      return <Research2/>
+    case '2':
+      return <Research3/>
+    default:
+      return <Research1/>
+  }
+}
 
 
 class Research extends Component {
@@ -20,7 +36,7 @@ class Research extends Component {
             Subtitle:'null',
             Menu:
             [{id: 1, title:'LabInfo', Stitle:['교수소개', '연구실소개', '오시는길'] },
-            {id: 2,title:'Research' ,Stitle:['교수소개', '연구실소개', '오시는길']},
+            {id: 2,title:'Research' ,Stitle:['1.사람과 사물 인식','2.사람과 사물 추적','3.실감형 콘텐츠']},
             {id: 3,title:'Publication' ,Stitle:['저널', '학회']},
             {id: 4,title:'Member' ,Stitle:['박사', '석사', '학부' , '졸업생', '연구실 사진']},
             {id: 5,title:'Board' ,Stitle:['공지사항', '자유게시판','일정']},
@@ -38,8 +54,9 @@ class Research extends Component {
       <div> 
           <Side_Menu id={this.state.modelist.indexOf('Research')} category={this.state.Menu}>
           </Side_Menu> 
-          <ArticleArea>
-           </ArticleArea>
+          <div  className='articleArea'>
+              <SetContent/>
+          </div>
       </div>
         
     }

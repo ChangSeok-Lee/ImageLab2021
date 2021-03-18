@@ -8,12 +8,13 @@ class profDesc extends Component{
    
     render(){
         return(
-            <div class='prof' >
+            <div className='prof' >
                 <div>
-                    <figure class='photo'>
+                    <figure className='photo'>
                         <img src='/data/image/professor.jpg'  alt ='no image'></img>
                     </figure>
-                    <table class='profTable' border="1">
+                    <table className='profTable' border="1">
+                        <tbody>
                         <tr><td></td></tr>
                         <tr>
                             <td>Name</td><td>이 칠 우</td>
@@ -31,6 +32,7 @@ class profDesc extends Component{
                             <td>E-mail</td><td>leecw@jnu.ac.kr</td>
                         </tr>
                         <tr><td></td></tr>
+                        </tbody>  
                     </table>
                     <img src='/data/image/LabInfo/titlebar_prof1.jpg'></img>
                     <ul>

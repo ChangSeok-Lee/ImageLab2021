@@ -1,6 +1,6 @@
 import { Component } from "react"
 import '../ComponentCss/Side_Menu.css'
-
+import {Link} from 'react-router-dom';
 
 
 class Side_Menu extends Component{
@@ -16,19 +16,16 @@ class Side_Menu extends Component{
         while(i<data[index-1].Stitle.length)
         {
             lists.push(
-            <li >
-                <a href='/' id={data[index-1].Stitle[i]} onClick={function(e){
-                    e.preventDefault();
-                    this.props.onChangeSubIndex(e.target.innerText);
-                }.bind(this)                
-            }> {data[index-1].Stitle[i]}</a></li>)
-            i+=1;
+            <li key={data[index-1].title+i}>
+                <Link to={`/${data[index-1].title}/${i}`}>{data[index-1].Stitle[i]}</Link>
+            </li>)
+            i++;
         }
         return (
                 <div className='sideMenu'>
                     <div className='title'>{data[index-1].title}</div>                    
-                    <ul>
-                     <li>{lists}</li>
+                    <ul key="side_menu">
+                     {lists}
                     </ul>
                 </div>
         )

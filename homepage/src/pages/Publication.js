@@ -7,8 +7,6 @@ import { Component } from 'react';
 
 
 
-
-
 class Publication extends Component {
 
     constructor(props){
@@ -20,7 +18,7 @@ class Publication extends Component {
             Subtitle:'null',
             Menu:
             [{id: 1, title:'LabInfo', Stitle:['교수소개', '연구실소개', '오시는길'] },
-            {id: 2,title:'Research' ,Stitle:['교수소개', '연구실소개', '오시는길']},
+            {id: 2,title:'Research' ,Stitle:['1.사람과 사물 인식','2.사람과 사물 추적','3.실감형 콘텐츠']},
             {id: 3,title:'Publication' ,Stitle:['저널', '학회']},
             {id: 4,title:'Member' ,Stitle:['박사', '석사', '학부' , '졸업생', '연구실 사진']},
             {id: 5,title:'Board' ,Stitle:['공지사항', '자유게시판','일정']},
