@@ -9,7 +9,11 @@ class Footer extends Component{
     {
         return(
 
-            <div className='footer'>footer area</div>
+            <div className='footer'>
+            이메일 : <br></br>
+            주소 : <br></br>
+            
+            </div>
 
         );
     }

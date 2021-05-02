@@ -42,7 +42,7 @@ function Form(){
                 <textarea name="content" onChange={(e)=>handleChange(e)} cols="50" rows="5"
                    value={content} placeholder="내용을 입력해주세요"/><br/>
                 
-            <button type="submit" >완료</button>
+            <button type="submit">완료</button>
         </form>
     )
 }

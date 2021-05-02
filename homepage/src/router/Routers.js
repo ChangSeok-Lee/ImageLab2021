@@ -13,6 +13,7 @@ import Research from '../pages/Research';
 import Publication from '../pages/Publication';
 import Member from '../pages/Member';
 import Board from '../pages/Board';
+import Form from '../component/Category/Board/posting_new';
 
 class Routers extends React.Component {
   render() {
@@ -27,7 +28,6 @@ class Routers extends React.Component {
           <Route path="/Publication" component={Publication} />
           <Route path="/Member" component={Member} />
           <Route path="/Board" component={Board} />
-          <Route path="/Board/Posting_new" component={Board} />
           <Route path="/test" component={Test} />
         </Switch>
       </Router>
